@@ -1,29 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Coin Toss Simulator</title>
-</head>
-<body>
-    <h1>Coin Toss Simulation (100 Times)</h1>
+#include <iostream>
+#include <cstdlib>  // For rand() and srand()
+#include <ctime>    // For time()
 
-    <?php
-    $heads = 0;
-    $tails = 0;
+using namespace std;
 
-    for ($i = 1; $i <= 100; $i++) {
-        $toss = rand(0, 1); // 0 = heads, 1 = tails
+int main() {
+    int heads = 0;
+    int tails = 0;
 
-        if ($toss === 0) {
-            $heads++;
+    // Seed the random number generator
+    srand(static_cast<unsigned int>(time(0)));
+
+    for (int i = 0; i < 100; i++) {
+        int toss = rand() % 2; // 0 or 1
+
+        if (toss == 0) {
+            heads++;
         } else {
-            $tails++;
+            tails++;
         }
     }
 
-    echo "<p>Total Tosses: 100</p>";
-    echo "<p>Heads: $heads</p>";
-    echo "<p>Tails: $tails</p>";
-    ?>
-</body>
-</html>
+    cout << "Coin Toss Simulation (100 times)" << endl;
+    cout << "Heads: " << heads << endl;
+    cout << "Tails: " << tails << endl;
+
+    return 0;
+}
