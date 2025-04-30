@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paycheck Calculator</title>
+</head>
+<body>
+    <h1>Paycheck Calculator</h1>
+    <form action="paycheck.php" method="post">
+        <label for="hours">Hours Worked:</label>
+        <input type="number" step="0.01" id="hours" name="hours" required><br><br>
+
+        <label for="rate">Rate of Pay ($):</label>
+        <input type="number" step="0.01" id="rate" name="rate" required><br><br>
+
+        <input type="submit" value="Calculate Pay">
+    </form>
+</body>
+</html>
